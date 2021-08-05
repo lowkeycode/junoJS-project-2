@@ -32,7 +32,7 @@ const renderMap = function () {
       attribution:
         'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
       minZoom: 9,
-      maxZoom: 12,
+      maxZoom: 11,
       id: "mapbox/outdoors-v11",
       tileSize: 512,
       zoomOffset: -1,
@@ -48,8 +48,6 @@ const randomInt = (min, max) =>
   Math.floor(Math.random() * (max - min) + 1) + min;
 
 const getWeatherBackground = async function (weatherData) {
-
-  
 
   try {
     $heroImgContainer.addClass("marginalize");
