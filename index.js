@@ -2,6 +2,10 @@ $searchBtn = $(".search-button");
 $weather = $(".weather");
 $search = $(".search");
 $box = $(".box");
+$heroImgContainer = $(".hero-container");
+$heroImg = $(".hero-container__img");
+$title = $('.title');
+$logo = $('.logo');
 let lat;
 let lng;
 
@@ -10,6 +14,8 @@ const handleClose = function (e) {
   $heroImgContainer.removeClass('marginalize');
   $heroImg = $(".hero-container__img");
   $heroImg.attr("src", './img/aas-hero.jpg');
+  $logo.removeClass('skooch');
+  $title.removeClass('skooch');
   $weather.empty();
   $weather.addClass("hide");
   $box.removeClass("box-display");
@@ -42,11 +48,13 @@ const randomInt = (min, max) =>
   Math.floor(Math.random() * (max - min) + 1) + min;
 
 const getWeatherBackground = async function (weatherData) {
-  $heroImgContainer = $(".hero-container");
-  $heroImg = $(".hero-container__img");
+
+  
 
   try {
     $heroImgContainer.addClass("marginalize");
+    $logo.addClass('skooch');
+    $title.addClass('skooch');
     const superSecretKey = "ZPnBuAWa6RtJh9NzLdZjhURL9jwQ7Li7sIXqpympOqs";
     console.log(weatherData.weather[0].description);
 
@@ -130,6 +138,7 @@ const getWeather = async function () {
   } catch (err) {
     console.log(err);
     alert("City not found. Please try again!");
+    $(".search-input").val("");
   }
 };
 

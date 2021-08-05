@@ -71,6 +71,7 @@ body {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+  transition: all 0.3s;
 }
 
 .logo {
@@ -79,6 +80,11 @@ body {
   position: absolute;
   top: var(--space-xl);
   left: var(--space-xl);
+  transition: all 0.3s;
+}
+
+.skooch {
+  top: 2rem;
 }
 
 .hero-container {
@@ -90,10 +96,11 @@ body {
   z-index: -1;
   padding-top: 0;
   transition: all 0.3s;
+  background: var(--color-grey-light);
 }
 
 .marginalize {
-  padding-top: 15rem;
+  padding-top: 10rem;
   background: linear-gradient(
     155deg,
     var(--color-grey-dark),
@@ -101,6 +108,8 @@ body {
     var(--color-grey-dark)
   );
 }
+
+
 
 .hero-container__img {
   filter: brightness(85%);
@@ -111,7 +120,7 @@ body {
 
 .box {
   position: fixed;
-  top: 60%;
+  top: 55%;
   left: 50%;
   transform: translateY(-50%) translateX(-50%);
   width: 50%;
