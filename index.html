@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <title>A | A | S</title>
+  </head>
+  <body>
+    <main class="container">
+      <h1 class="title">Asynchronous Atmospheric State</h1>
+
+      <div class="box">
+        <!-- WEATHER -->
+        <div class="weather hide"></div>
+
+        <!-- SEARCH -->
+        <div class="search">
+          <button class="search-button">Get Weather</button>
+          <div class="search-box">
+            <input
+              class="search-input"
+              type="search"
+              placeholder="Search a city..."
+            />
+            <img class="search-icon" src="./img/search.svg" alt="Search Icon" />
+          </div>
+        </div>
+      </div>
+    </main>
+    <figure class="hero-container" }>
+      <img
+        class="hero-container__img"
+        src="./img/aas-hero.jpg"
+        alt="Image of Changing Weather"
+      />
+    </figure>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="index.js"></script>
+  </body>
+</html>

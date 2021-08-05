@@ -1,0 +1,237 @@
+:root {
+  /* Colors */
+  --color-grey-dark: #3b4248;
+  --color-grey-light: #9c9da3;
+
+  --color-white-primary: #fdfdfd;
+  --color-white-secondary: #f4f4f5;
+
+  --color-green-primary: #75b647;
+
+  --color-green-secondary: #a7d352;
+
+  /* Typography */
+  --font-size-huge: 11.089rem;
+  --font-size-xl: 6.854rem;
+  --font-size-lrg: 4.236rem;
+  --font-size-med: 2.618rem;
+  --font-size-sml: 1.618rem;
+  --font-size-xs: 1rem;
+
+  /* Spacing */
+  --space-huge: 8rem;
+  --space-xl: 5rem;
+  --space-lrg: 3rem;
+  --space-med: 1.5rem;
+  --space-sml: 0.75rem;
+  --space-xs: 0.5rem;
+
+  /* Border Rads */
+  --bord-rad-xl: 30px;
+  --bord-rad-lrg: 8px;
+  --bord-rad-med: 5px;
+  --bord-rad-sml: 3px;
+
+  /* Box Shads */
+  --box-shad-1: rgba(59, 66, 72, 0.5) 0px 3px 6px,
+    rgba(59, 66, 72, 0.5) 0px 3px 6px;
+  --box-shad-2: rgba(59, 66, 72, 0.5) 0px 5px 8px;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  font-family: "Titillium Web", sans-serif;
+}
+
+body {
+  color: var(--color-grey-dark);
+}
+
+.title {
+  position: absolute;
+  top: var(--space-xl);
+  text-align: center;
+  font-size: var(--font-size-xl);
+  width: 100vw;
+  background-image: linear-gradient(
+    145deg,
+    var(--color-green-primary),
+    var(--color-green-secondary),
+    var(--color-green-primary)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.hero-container {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.hero-container__img {
+  filter: brightness(85%);
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.box {
+  position: fixed;
+  top: 55%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  width: 50%;
+  height: 55%;
+  background: transparent;
+  box-shadow: none;
+  /* border: 1px solid white; */
+}
+
+/* ! Display none search and add this class (this class is added/removed via JS and the html not display none) */
+.box-display {
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: var(--bord-rad-med);
+  box-shadow: var(--box-shad-1);
+}
+
+.search {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-button {
+  height: 4.5rem;
+  width: 25rem;
+  font-size: var(--font-size-sml);
+  margin-right: var(--space-sml);
+  border: 1px solid var(--color-white-secondary);
+  color: var(--color-white-secondary);
+  background-color: rgba(117, 182, 71, 0.85);
+  border-radius: var(--bord-rad-xl);
+  text-transform: uppercase;
+  transition: all 0.3s;
+}
+
+.search-button:hover {
+  cursor: pointer;
+  border: 1px solid var(--color-green-primary);
+  color: var(--color-green-primary);
+  background-color: rgba(255, 255, 255, 0.85);
+}
+
+.search-box {
+  position: relative;
+}
+
+.search-input {
+  height: 4.5rem;
+  width: 4.5rem;
+  border: 3px solid transparent;
+  border-radius: var(--bord-rad-xl);
+  background-color: rgba(255, 255, 255, 0.85);
+  transition: all 0.3s;
+  font-family: "Titillium Web", sans-serif;
+  font-size: var(--font-size-sml);
+  padding-left: 15px;
+  transition: all 0.3s;
+  /* width: 25rem; */
+}
+
+.search-input::placeholder {
+  color: transparent;
+}
+
+.search-box:hover .search-input {
+  width: 25rem;
+}
+
+.search-input:focus {
+  width: 25rem;
+  outline: none;
+  border: 2px solid var(--color-green-primary);
+}
+
+.search-input:focus::placeholder {
+  color: var(--color-grey-dark);
+}
+
+.search-icon {
+  position: absolute;
+  right: 13px;
+  top: 12px;
+  color: var(--color-green-primary);
+}
+
+.weather {
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+}
+
+.weather__location {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--font-size-lrg);
+  font-weight: 600;
+}
+
+.weather__temp {
+  grid-column: 1 / 2;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-weight: 400;
+  font-size: var(--font-size-med);
+}
+
+.weather__forecast {
+  grid-column: 2 / -1;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-weight: 400;
+  font-size: var(--font-size-med);
+}
+
+.weather__forecast--icon {
+  width: 7rem;
+  height: 7rem;
+  background: rgba(59, 66, 72, 0.15);
+  border-radius: 50%;
+}
+
+.weather__forecast--icon img {
+  width: 100%;
+}
+
+.weather__map {
+  grid-column: 1 / -1;
+  grid-row: 3 / -1;
+  border: 1px solid blue;
+}
+
+.hide {
+  display: none;
+}
