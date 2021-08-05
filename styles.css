@@ -81,8 +81,6 @@ body {
   left: var(--space-xl);
 }
 
-
-
 .hero-container {
   position: fixed;
   height: 100vh;
@@ -96,7 +94,12 @@ body {
 
 .marginalize {
   padding-top: 15rem;
-  background: linear-gradient(155deg, var(--color-grey-dark), var(--color-grey-light), var(--color-grey-dark));
+  background: linear-gradient(
+    155deg,
+    var(--color-grey-dark),
+    var(--color-grey-light),
+    var(--color-grey-dark)
+  );
 }
 
 .hero-container__img {
@@ -119,7 +122,6 @@ body {
   padding-bottom: 8px;
   /* border: 1px solid white; */
 }
-
 
 /* ! Display none search and add this class (this class is added/removed via JS and the html not display none) */
 .box-display {
@@ -212,7 +214,7 @@ body {
   justify-content: center;
   align-items: center;
   font-size: var(--font-size-lrg);
-  font-weight: 600;
+  font-weight: 400;
   position: relative;
 }
 
@@ -246,17 +248,16 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  font-weight: 400;
+  font-weight: 600;
   font-size: var(--font-size-med);
 }
 
 .weather__forecast {
   grid-column: 2 / -1;
-
   display: flex;
   justify-content: space-around;
   align-items: center;
-  font-weight: 400;
+  font-weight: 600;
   font-size: var(--font-size-med);
 }
 
@@ -276,6 +277,33 @@ body {
   grid-row: 3 / -1;
   margin-top: var(--space-sml);
   height: 100%;
+}
+
+.footer {
+  position: absolute;
+  left: 50%;
+  bottom: var(--space-lrg);
+  transform: translateX(-50%);
+}
+
+.footer__copy {
+  font-size: var(--font-size-sml);
+}
+
+.footer__copy a:link,
+.footer__copy a:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--color-green-primary);
+  transition: all 0.3s;
+}
+
+.footer__copy a:hover,
+.footer__copy a:active {
+  cursor: pointer;
+  color: var(--color-green-secondary);
 }
 
 .hide {
