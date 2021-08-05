@@ -60,7 +60,7 @@ body {
   position: absolute;
   top: var(--space-xl);
   text-align: center;
-  font-size: var(--font-size-xl);
+  font-size: var(--font-size-lrg);
   width: 100vw;
   background-image: linear-gradient(
     145deg,
@@ -73,6 +73,16 @@ body {
   color: transparent;
 }
 
+.logo {
+  height: 6.5rem;
+  width: 6.5rem;
+  position: absolute;
+  top: var(--space-xl);
+  left: var(--space-xl);
+}
+
+
+
 .hero-container {
   position: fixed;
   height: 100vh;
@@ -80,6 +90,13 @@ body {
   top: 0;
   left: 0;
   z-index: -1;
+  padding-top: 0;
+  transition: all 0.3s;
+}
+
+.marginalize {
+  padding-top: 15rem;
+  background: linear-gradient(155deg, var(--color-grey-dark), var(--color-grey-light), var(--color-grey-dark));
 }
 
 .hero-container__img {
@@ -91,15 +108,18 @@ body {
 
 .box {
   position: fixed;
-  top: 55%;
+  top: 60%;
   left: 50%;
   transform: translateY(-50%) translateX(-50%);
   width: 50%;
   height: 55%;
   background: transparent;
   box-shadow: none;
+  overflow: hidden;
+  padding-bottom: 8px;
   /* border: 1px solid white; */
 }
+
 
 /* ! Display none search and add this class (this class is added/removed via JS and the html not display none) */
 .box-display {
@@ -193,6 +213,31 @@ body {
   align-items: center;
   font-size: var(--font-size-lrg);
   font-weight: 600;
+  position: relative;
+}
+
+.weather__location--close {
+  position: absolute;
+  right: var(--space-med);
+  top: -2px;
+  height: 3rem;
+  width: 3rem;
+  transition: all 0.3s;
+}
+
+.weather__location--close:hover {
+  cursor: pointer;
+  transform: translateY(-4px);
+}
+
+.weather__location--close:active {
+  cursor: pointer;
+  transform: translateY(-2px);
+}
+
+.close {
+  width: 100%;
+  height: 100%;
 }
 
 .weather__temp {
@@ -229,7 +274,8 @@ body {
 .weather__map {
   grid-column: 1 / -1;
   grid-row: 3 / -1;
-  border: 1px solid blue;
+  margin-top: var(--space-sml);
+  height: 100%;
 }
 
 .hide {
