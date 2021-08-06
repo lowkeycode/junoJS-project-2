@@ -58,9 +58,10 @@ body {
 
 .title {
   position: absolute;
-  top: var(--space-xl);
+  top: var(--space-lrg);
   text-align: center;
-  font-size: var(--font-size-lrg);
+  font-size: var(--font-size-xl);
+  font-weight: 300;
   width: 100vw;
   background-image: linear-gradient(
     145deg,
@@ -83,10 +84,6 @@ body {
   transition: all 0.3s;
 }
 
-.skooch {
-  top: 2rem;
-}
-
 .hero-container {
   position: fixed;
   height: 100vh;
@@ -99,18 +96,6 @@ body {
   background: var(--color-grey-light);
 }
 
-.marginalize {
-  padding-top: 10rem;
-  background: linear-gradient(
-    155deg,
-    var(--color-grey-dark),
-    var(--color-grey-light),
-    var(--color-grey-dark)
-  );
-}
-
-
-
 .hero-container__img {
   filter: brightness(85%);
   object-fit: cover;
@@ -120,7 +105,7 @@ body {
 
 .box {
   position: fixed;
-  top: 55%;
+  top: 50%;
   left: 50%;
   transform: translateY(-50%) translateX(-50%);
   width: 50%;
@@ -132,7 +117,6 @@ body {
   /* border: 1px solid white; */
 }
 
-/* ! Display none search and add this class (this class is added/removed via JS and the html not display none) */
 .box-display {
   background-color: rgba(255, 255, 255, 0.85);
   border-radius: var(--bord-rad-med);
@@ -182,7 +166,10 @@ body {
   font-size: var(--font-size-sml);
   padding-left: 15px;
   transition: all 0.3s;
-  /* width: 25rem; */
+}
+
+.search-box:hover .search-input::placeholder {
+  color: var(--color-grey-dark);
 }
 
 .search-input::placeholder {
@@ -223,7 +210,7 @@ body {
   justify-content: center;
   align-items: center;
   font-size: var(--font-size-lrg);
-  font-weight: 400;
+  font-weight: 600;
   position: relative;
 }
 
@@ -242,7 +229,6 @@ body {
 }
 
 .weather__location--close:active {
-  cursor: pointer;
   transform: translateY(-2px);
 }
 
@@ -257,7 +243,7 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  font-weight: 600;
+  font-weight: 400;
   font-size: var(--font-size-med);
 }
 
@@ -266,7 +252,7 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  font-weight: 600;
+  font-weight: 400;
   font-size: var(--font-size-med);
 }
 
