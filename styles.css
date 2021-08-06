@@ -46,10 +46,14 @@
   box-sizing: inherit;
 }
 
+/*  Default browser font size = 16px | 10px/16px = 62.5% | 1rem/1em = 62.5% or 10px */
+
 html {
   font-size: 62.5%;
   box-sizing: border-box;
   font-family: "Titillium Web", sans-serif;
+
+  
 }
 
 body {
@@ -108,7 +112,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translateY(-50%) translateX(-50%);
-  width: 50%;
+  width: 60%;
   height: 55%;
   background: transparent;
   box-shadow: none;
@@ -303,4 +307,54 @@ body {
 
 .hide {
   display: none;
+}
+
+/* BREAK POINTS */
+/*  Default browser font size = 16px | 10px/16px = 62.5% | 1rem/1em = 62.5% or 10px */
+/* bp-lrg: 56.25em = 900px/16px | font-size: 8px | 8px/16px = 50% */
+/* bp-med: 43.75em = 700px/16px */
+/* bp-sml: 37.5em = 600px/16px  | font-size: 6px | 7px/16px = 37.5%*/
+/* bp-xs: */
+
+@media only screen and (max-width: 56.25em) {
+  html {
+    font-size: 50%;
+  }
+
+  .search-icon {
+    right: 8px;
+    top: 8px;
+  }
+
+  .box {
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 43.75em) {
+  .logo {
+    left: 50%;
+    transform: translateX(-50%);
+    top: var(--space-lrg);
+  }
+
+  .title {
+    top: var(--space-huge);
+  }
+
+  .box {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  html {
+    font-size: 43.8%;
+  }
+
+  .search-icon {
+    right: 6px;
+    top: 6px;
+  }
+
 }
